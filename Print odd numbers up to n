@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter the limit (n): ";
+    cin >> n;
+
+    // Start at 1, jump by 2 to get 1, 3, 5, ...
+    for (int i = 1; i <= n; i += 2) {
+        cout << i << " ";
+    }
+
+    return 0;
+}
