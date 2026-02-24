@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, digit;
+    int sum = 0;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    // We use a temporary variable if we want to keep the original 'n'
+    int temp = n;
+
+    // Handle negative numbers by making them positive
+    if (temp < 0) temp = -temp;
+
+    while (temp > 0) {
+        digit = temp % 10;    // Extract the last digit
+        sum = sum + digit;    // Add it to sum
+        temp = temp / 10;     // Remove the last digit from the number
+    }
+
+    cout << "Sum of digits of " << n << " is: " << sum << endl;
+
+    return 0;
+}
