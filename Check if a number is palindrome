@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, remainder;
+    long long reversedNumber = 0; // Use long long to prevent overflow
+
+    cout << "Enter an integer: ";
+    cin >> n;
+
+    int originalNumber = n; // Store the original value
+
+    // Reversing the number
+    int temp = n;
+    while (temp > 0) {
+        remainder = temp % 10;
+        reversedNumber = reversedNumber * 10 + remainder;
+        temp /= 10;
+    }
+
+    // Checking if original and reversed are same
+    if (originalNumber == reversedNumber) {
+        cout << originalNumber << " is a Palindrome." << endl;
+    } else {
+        cout << originalNumber << " is NOT a Palindrome." << endl;
+    }
+
+    return 0;
+}
