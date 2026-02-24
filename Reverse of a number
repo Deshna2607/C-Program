@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, remainder;
+    int reversedNumber = 0;
+
+    cout << "Enter an integer: ";
+    cin >> n;
+
+    int temp = n; // Store original value
+
+    while (temp != 0) {
+        remainder = temp % 10;                // Get the last digit
+        reversedNumber = reversedNumber * 10 + remainder; // Shift and add
+        temp /= 10;                           // Remove the last digit
+    }
+
+    cout << "Reversed Number = " << reversedNumber << endl;
+
+    return 0;
+}
