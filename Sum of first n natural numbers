@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long n; // Using long long for larger numbers
+    cout << "Enter the value of n: ";
+    cin >> n;
+
+    // Direct calculation
+    long long sum = n * (n + 1) / 2;
+
+    cout << "The sum of first " << n << " natural numbers is: " << sum << endl;
+
+    return 0;
+}
