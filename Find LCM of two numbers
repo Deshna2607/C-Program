@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+// Function to find GCD using Euclidean algorithm
+long long findGCD(long long a, long long b) {
+    while (b != 0) {
+        long long temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+// Function to find LCM
+long long findLCM(long long a, long long b) {
+    if (a == 0 || b == 0) return 0;
+    
+    // We divide before multiplying to prevent potential overflow
+    return (a / findGCD(a, b)) * b;
+}
+
+int main() {
+    long long num1, num2;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    cout << "LCM of " << num1 << " and " << num2 << " is: " 
+         << findLCM(num1, num2) << endl;
+
+    return 0;
+}
