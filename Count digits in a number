@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long n;
+    int count = 0;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    // Handle the case where the number is 0
+    if (n == 0) {
+        count = 1;
+    } else {
+        // If negative, make it positive for counting
+        if (n < 0) n = -n;
+
+        while (n > 0) {
+            n = n / 10; // Remove the last digit
+            count++;    // Increment counter
+        }
+    }
+
+    cout << "Number of digits: " << count << endl;
+
+    return 0;
+}
