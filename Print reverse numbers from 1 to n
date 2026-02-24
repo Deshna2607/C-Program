@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter the starting number (n): ";
+    cin >> n;
+
+    // Start at n, continue as long as i >= 1, decrement i
+    for (int i = n; i >= 1; i--) {
+        cout << i << " ";
+    }
+
+    return 0;
+}
