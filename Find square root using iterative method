@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double number, guess, epsilon;
+
+    cout << "Enter a number: ";
+    cin >> number;
+
+    // Initial guess
+    guess = number / 2.0;
+
+    // Accuracy (tolerance level)
+    epsilon = 0.0001;
+
+    // Iterative process
+    while ((guess * guess - number) > epsilon || (number - guess * guess) > epsilon) {
+        guess = (guess + number / guess) / 2.0;
+    }
+
+    cout << "Square root of " << number << " is approximately: " << guess << endl;
+
+    return 0;
+}
