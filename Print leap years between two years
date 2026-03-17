@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int start, end;
+
+    cout << "Enter starting year: ";
+    cin >> start;
+
+    cout << "Enter ending year: ";
+    cin >> end;
+
+    cout << "Leap years between " << start << " and " << end << " are:\n";
+
+    for(int year = start; year <= end; year++) {
+        if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            cout << year << " ";
+        }
+    }
+
+    return 0;
+}
